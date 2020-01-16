@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["after 2am and before 7am on Monday"],
+  "labels": ["renovate"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "after 3am and before 7am on the first day of the month"
+    ]
+  },
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    }
+  ]
+}
